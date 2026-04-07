@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Link, Route, Routes, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Link, Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import PhotoCollection from './pages/PhotoCollection';
@@ -24,6 +24,7 @@ function AppContent() {
         <Route path="/heroes" element={<Heroes />} />
         <Route path="/photos" element={<PhotoCollection />} />
         <Route path={adminRoutePath} element={<AdminPanel />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
 
       {!isAdminRoute ? (
