@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg-color: #fdfbf7;
+  --text-primary: #1e293b;
+  --text-secondary: #475569;
+  --accent-color: #4b5320;
+  --accent-hover: #3f471b;
+  --glass-bg: rgba(253, 251, 247, 0.85);
+  --glass-border: rgba(0, 0, 0, 0.05);
+  --surface-color: rgba(255, 255, 255, 0.92);
+  --surface-muted: #eef2e8;
+  --surface-strong: #ffffff;
+  --soft-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+  --hero-dot-opacity: 0.15;
+  --hero-glow-a: rgba(0, 0, 0, 0.03);
+  --hero-glow-b: rgba(0, 0, 0, 0.03);
+  --badge-bg: rgba(0, 0, 0, 0.05);
+  --badge-border: rgba(0, 0, 0, 0.1);
+  --footer-border: rgba(0, 0, 0, 0.06);
+  --footer-top: rgba(255, 255, 255, 0.35);
+  --footer-bottom: rgba(255, 255, 255, 0.8);
+  --btn-secondary-hover: rgba(255, 255, 255, 0.05);
+  --btn-secondary-border-hover: rgba(255, 255, 255, 0.2);
+  --page-backdrop: transparent;
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  --bg-color: #0e1520;
+  --text-primary: #edf2f7;
+  --text-secondary: #a8b4c8;
+  --accent-color: #a9bf57;
+  --accent-hover: #91a748;
+  --glass-bg: rgba(14, 21, 32, 0.8);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --surface-color: rgba(17, 24, 39, 0.88);
+  --surface-muted: #182231;
+  --surface-strong: #111827;
+  --soft-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+  --hero-dot-opacity: 0.09;
+  --hero-glow-a: rgba(169, 191, 87, 0.08);
+  --hero-glow-b: rgba(96, 165, 250, 0.08);
+  --badge-bg: rgba(169, 191, 87, 0.12);
+  --badge-border: rgba(169, 191, 87, 0.18);
+  --footer-border: rgba(255, 255, 255, 0.08);
+  --footer-top: rgba(255, 255, 255, 0.02);
+  --footer-bottom: rgba(255, 255, 255, 0.05);
+  --btn-secondary-hover: rgba(255, 255, 255, 0.06);
+  --btn-secondary-border-hover: rgba(255, 255, 255, 0.12);
+  --page-backdrop:
+    radial-gradient(circle at top, rgba(169, 191, 87, 0.08), transparent 30%),
+    linear-gradient(180deg, rgba(14, 21, 32, 1), rgba(10, 15, 24, 1));
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--page-backdrop), var(--bg-color);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}

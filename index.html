@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rairangpur Ex-Army Association</title>
+    <meta
+      name="description"
+      content="Official website of the Rairangpur Ex-Army Association featuring community updates, veterans events, and photo collections."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:site_name" content="Rairangpur Ex-Army Association" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Rairangpur Ex-Army Association" />
+    <meta
+      property="og:description"
+      content="Official website of the Rairangpur Ex-Army Association featuring community updates, veterans events, and photo collections."
+    />
+    <meta property="og:image" content="/logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Rairangpur Ex-Army Association" />
+    <meta
+      name="twitter:description"
+      content="Official website of the Rairangpur Ex-Army Association featuring community updates, veterans events, and photo collections."
+    />
+    <meta name="twitter:image" content="/logo.png" />
+    <script>
+      (() => {
+        const savedTheme = localStorage.getItem('exarmy_theme');
+        const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.dataset.theme = savedTheme || systemTheme;
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
